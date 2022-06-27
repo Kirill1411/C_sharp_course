@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿int num1 = int.Parse(Console.ReadLine());
+int num2 = int.Parse(Console.ReadLine());
+
+if (num1 > num2)
+{
+    Console.WriteLine(num1);
+}
+else
+{
+    Console.WriteLine(num2);
+}
+if (num1 == num2)
+{
+    Console.WriteLine("Они равны");
+}
