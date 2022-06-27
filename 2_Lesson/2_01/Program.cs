@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿int TakeNum(int num)
+{
+    return num % 10;
+}
+Console.WriteLine(TakeNum(56865));
+Console.WriteLine(TakeNum(6569));
