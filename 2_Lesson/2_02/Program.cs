@@ -1,6 +1,5 @@
 ﻿int Maxnumber(int num)
 {
-
     if (num % 10 > num / 10)
     {
         return num % 10;
