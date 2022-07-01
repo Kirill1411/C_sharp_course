@@ -1,7 +1,7 @@
 ﻿void Number(int num)
 {
     Console.Write($"{num} -> ");
-    if (num < 99)
+    if (num < 100)
     {
         Console.Write("Нет третьего числа");
         return;
