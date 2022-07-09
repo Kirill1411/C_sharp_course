@@ -37,6 +37,6 @@ int[] ProductOfPairsOfNumbersInArray(int[] originalArray)
     return result;
 }
 
-int[] originalArray = MassNums(6);
+int[] originalArray = MassNums(3);
 Print(originalArray);
 Print(ProductOfPairsOfNumbersInArray(originalArray));
