@@ -4,12 +4,11 @@
 
 void Print(int[,] arr)
 {
-    int row_size = arr.GetLength(0);
     int column_size = arr.GetLength(1);
 
-    for (int i = 0; i < row_size; i++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        for (int j = 0; j < column_size; j++)
+        for (int j = 0; j < arr.GetLength(1); j++)
         {
             Console.Write($" {arr[i, j]} ");
         }
@@ -34,13 +33,11 @@ int[,] MassNums(int row, int column, int from, int to)
 
 int[,] CopyMass(int[,] arr)
 {
-    int row_size = arr.GetLength(0);
-    int column_size = arr.GetLength(1);
-    int[,] new_arr = new int[row_size, column_size];
+    int[,] new_arr = new int[arr.GetLength(0), arr.GetLength(1)];
 
-    for (int i = 0; i < row_size; i++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        for (int j = 0; j < column_size; j++)
+        for (int j = 0; j < arr.GetLength(1); j++)
         {
             new_arr[i, j] = arr[i, j];
         }
