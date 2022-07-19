@@ -1,6 +1,5 @@
-﻿/*Напишите программу, которая на вход принимает позиции
-элемента в двумерном массиве, и возвращает значение этого
-элемента или же указание, что такого элемента нет.*/
+﻿/*Задайте двумерный массив из целых чисел. Найдите
+среднее арифметическое элементов в каждом столбце.*/
 
 void Print(int[,] arr)
 {
@@ -31,15 +30,19 @@ int[,] MassNums(int row, int column, int from, int to)
     return arr;
 }
 
-string Position(int[,] arr, int one, int two)
+void ArithmeticalMean(int[,] arr)
 {
     int row = arr.GetLength(0);
     int column = arr.GetLength(1);
-
-    if (one > row || one <= 0 || two > column || two <= 0)
-        return $"{one} {two} -> Такого элемента нет.";
-    return $"arr[{one},{two}] = Значение элемента -> {arr[one - 1, two - 1]}";
+    double result;
+    for (int i = 0; i < column; i++)
+    {
+        result = 0;
+        for (int j = 0; j < row; j++) result += arr[j, i];
+        Console.Write($"{Math.Round(result / row, 2)}; ");
+    }
 }
+
 
 Console.Write("Введите количество строк: ");
 int row = int.Parse(Console.ReadLine());
@@ -50,13 +53,4 @@ Console.WriteLine();
 
 int[,] arr_1 = MassNums(row, column, 1, 10);
 Print(arr_1);
-
-Console.Write("Введите позицию строки: ");
-int First = int.Parse(Console.ReadLine());
-
-Console.Write("Введите позицию столба: ");
-int Second = int.Parse(Console.ReadLine());
-Console.WriteLine();
-
-
-Console.WriteLine(Position(arr_1, First, Second));
+ArithmeticalMean(arr_1);
