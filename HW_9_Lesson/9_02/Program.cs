@@ -8,4 +8,4 @@ int Power(int M, int N)
 }
 
 Console.WriteLine(Power(1, 15));
-Console.WriteLine(Power(4, 8));
+Console.WriteLine(Power(4, 9));
